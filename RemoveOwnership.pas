@@ -4,7 +4,7 @@
   Author: Ryan ryan.a.piper@gmail.com 
    after: dalen <erik.gustav.dalen@gmail.com>
           https://github.com/dalen/xedit-scripts.git
-  Version: 0.1
+  Version: 1
 }
 unit userscript;
 
