@@ -12,7 +12,7 @@ procedure RemoveOwnership(e: IInterface);
 var
   ownerElement: IInterface;
 begin
-  ownerElement := ElementByPath(e, 'Ownership')
+   ownerElement := ElementByPath(e, 'Ownership');
   RemoveElement(e, ownerElement);
 end;
 
@@ -31,7 +31,8 @@ begin
   PlacedObject := LinksTo(ElementByName(e, 'NAME - Base'));
 
   // Skip if placed object type is not TreeFlora*
-  if not StrPos(EditorID(PlacedObject), 'TreeFlora') then exit;
+  //if not StrPos(EditorID(PlacedObject), 'TreeFlora') then exit;
+  if not StartsStr('USKPTreeFlora', EditorID(PlacedObject)) then exit;
 
   // Skip items that already don't have owners
   owner := ElementByPath(e, 'Ownership');
